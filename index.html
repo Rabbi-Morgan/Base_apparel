@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="stylesheet" href="base.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="hero_header">
+      <div class="hero_img">
+        <img id="desktop" src="./images/hero-desktop.jpg" title="hero image" alt="hero image">
+        <img id="mobile" src="./images/hero-mobile.jpg" title="hero image" alt="hero image">
+      </div>
+    </header>
+    <section>
+      <div class="logo"><img src="./images/logo.svg" alt=""></div>
+      <div class="hpf cont">
+        <h1 class="big_heading">We're <span> coming soon</span></h1>
+        <p class="paragraph">Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form novalidate oninvalid="" action="mailto:omobolaji.anuoluwapo@yahoo.com" method="POST">
+          <input required type="email" name="email" id="email" placeholder="Email Address">
+          <button id="submit"><img src="./images/icon-arrow.svg" alt=""></button>
+          <div class="error_circle"><span>!</span></div>
+        </form>
+        <small class=" error_note">Please provide a valid email address!</small>
+      </div>
+    </section>
+  </div>
+
+</body>
+<script src="base.js"></script>
+
+</html>

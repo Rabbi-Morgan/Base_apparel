@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+:root {
+--Desaturated_Red: hsl(0, 36%, 70%);
+--Soft_Red: hsl(0, 93%, 68%);
+--Dark_Grayish_Red: hsl(0, 6%, 24%);
+--linear_grad_1: linear-gradient( hsl(0, 80%, 90%), hsl(0, 80%, 86%));
+--linear_grad_2: linear-gradient( hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+--base_font_size: 16px;
+--normal_weight: 300;
+--bold_normal_weight: 400;
+--bold_weight: 600;
+--border_radius: 25px;
+
+}
+html, body {
+    overflow-x: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+}
+section {
+    width: 100%;
+}
+#desktop {
+    display: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+.cont {
+    width: 85%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.container {
+    width: 100%;
+}
+.logo img {
+    width: 120px;
+    display: inline-block;
+    margin-left: 2rem;
+    height: 1.5rem;
+
+}
+img {
+    width: 100%;
+}
+.hero_img {
+    width: 100%;
+    margin-top: 3.5rem;
+}
+.logo {
+    padding: 1.5rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+}
+.hpf {
+    margin: 3rem auto;
+    text-align: center;
+}
+.big_heading, 
+.paragraph {
+    color: var(--Desaturated_Red);
+}
+.big_heading {
+    letter-spacing: 10px;
+    font-size: 3.5rem;
+    font-weight: var(--normal_weight);
+    text-transform: uppercase;
+}
+.big_heading span {
+    color: var(--Dark_Grayish_Red);
+    font-weight: var(--bold_weight);
+}
+.paragraph {
+    margin: 2rem 0;
+    font-size: 1rem;
+}
+form {
+    position: relative;
+}
+input[type=email]{
+    width: 100%;
+    border-radius: var(--border_radius);
+    height: 3rem;
+    border: 1px solid var(--Desaturated_Red);
+    padding: 1rem;
+    font-weight: var(--bold_weight);
+    color: var(--Dark_Grayish_Red);
+    
+}
+form.error {
+    animation: shake .2s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+input[type=email].error {
+    border-color: var(--Soft_Red);
+}
+.input[type=email].good {
+    border-color: #4fe44f;
+}
+input[type=email]:focus, button:focus{
+    outline: none;
+
+}
+#submit {
+    position: absolute;
+    top: 0;
+    height: 3rem;
+    right: 0;
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--linear_grad_2);
+    border: none;
+    border-radius: var(--border_radius);
+    box-shadow: 0 10px 15px 2px rgba(0,0,0,.1);
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+#submit:hover {
+    transform: scale(1.05);
+    background: var(--linear_grad_1);
+    box-shadow: 0 10px 15px 2px rgba(0,0,0,.2);
+}
+.error_note {
+    color: var(--Soft_Red);
+    display: none;
+    margin: .5rem 2rem;
+    font-weight: var(--bold_weight);
+    font-style: italic;
+}
+.error_note.error {
+    display: inline-block;
+}
+#submit img {
+    width: 12px;
+}
+.error_circle.error {
+    display: flex;
+}
+.error_circle {
+    position: absolute;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    background: var(--Soft_Red);
+}
+.error_circle span {
+    user-select: none;
+}
+@keyframes shake {
+    0% {
+        transform: translate(5px 1px);
+
+    }
+    50% {
+        transform: translate(10px 2px);
+    }
+    100% {
+        transform: translate(0 0);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .logo {
+        position: relative;
+    }
+    header{
+        float: right;
+        width: 40%;
+    }
+    header, section {
+        height: 100vh;
+        overflow: hidden;
+    }
+    section {
+        float: left;
+        width: 60%;
+        background: url(./images/bg-pattern-desktop.svg);
+        background-color:hsl(0, 80%, 96%);
+    }
+
+    .logo, .cont {
+        padding: 0;
+        width: 70%;
+        margin: 0 auto;
+    }   
+    .hero_img {
+        margin-top: 0;
+        height: 100%;
+    }
+    #desktop {
+        object-fit: cover;
+        height: 100%;
+    }
+    .logo {
+        justify-self: flex-end;
+        background: none;
+        margin: 2rem auto 7rem auto;
+    }
+    #desktop {
+        display: inline-block;
+    }
+    #mobile {
+        display: none;
+    }
+    .logo img {
+        margin-left: 0;
+    }
+    .hpf {
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .logo, .cont {
+        width: 50%;
+    }
+}
